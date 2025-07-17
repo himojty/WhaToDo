@@ -1,4 +1,8 @@
-# WhaToDo // W2D
+# WhaToWatch // W2W
+[![Python checks 🐍](https://img.shields.io/github/actions/workflow/status/mahenzon/fastapi-url-shortener/python-checks.yaml?branch=master&label=Python%20checks%20%F0%9F%90%8D&logo=github&style=for-the-badge)](https://github.com/mahenzon/fastapi-url-shortener/actions/workflows/python-checks.yaml)
+[![Python Version](https://img.shields.io/badge/python-3.13%2B-blue?logo=python&style=for-the-badge)](https://www.python.org/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?logo=python&style=for-the-badge)](https://github.com/psf/black)
+
 
 ## Описание проекта
 
