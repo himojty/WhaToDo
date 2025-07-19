@@ -1,9 +1,8 @@
 /* BASIC LAYOUT */
 .header {
     position: fixed;
-    background-color: #1e1e1e;
+    background-color: transparent;
     width: 100%;
-    padding: 16px;
     z-index: 100;
 }
 
@@ -38,7 +37,7 @@
 /* HEADER */
 .header.sticky {
     height: 55px;
-    padding: 0 20px;
+    background: #1e1e1e
 }
 
 .logo {
@@ -46,6 +45,7 @@
     position: relative;
     height: 25px;
     min-width: auto;
+    margin-left: 30px;
 }
 
 .logo img {
@@ -74,6 +74,7 @@
 .header-menu {
     gap: 0 20px;
     align-items: center;
+    margin-right: 30px;
 }
 
 .header-menu li {
@@ -86,9 +87,9 @@
 }
 
 #home {
-    color: white;
-    margin-right: 30px;
     font-size: 18px;
+    font-weight: 700;
+    color: #CCCCC;
 }
 
 #home:hover {
