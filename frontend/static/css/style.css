@@ -44,7 +44,7 @@
 .logo {
     display: block;
     position: relative;
-    height: 30px;
+    height: 25px;
     min-width: auto;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .header-menu li {
-    line-height: 45px;
+    line-height: 50px;
 }
 
 .header-menu a {
@@ -108,7 +108,7 @@
     margin-left: -120px;
     margin-right: -120px;
     position: relative;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
