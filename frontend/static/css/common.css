@@ -1,0 +1,29 @@
+* {
+    background: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    box-sizing: border-box;
+
+    font-family: "Franklin Gothic Medium", sans-serif;
+    color: #CCCCCC;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;          /* Наследует цвет текста от родителя */
+    text-decoration: none;   /* Убирает подчёркивание */
+}
+
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+
+}

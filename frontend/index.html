@@ -1,10 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Крутой Сайт</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/common.css">
 </head>
-<body>
+<body class="background-image">
 
+<div class="mpg">
+
+    <header class="header sticky">
+        <div class="main-container d-flex jc-space-between ai-center">
+            <a class="logo" href="/">
+                <img src="static/images/logo.png" alt="Логотип" loading="lazy">
+            </a>
+
+            <ul class="header-menu d-flex">
+                <li id="home"><a href="/">Главная</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-container mainpage">
+        <main>
+            <div>
+
+                <section class="flor hero img-fixed-size">
+                    <div class="welcome-text">
+                        <h1 class="welcome-title">Добро пожаловать в WhaToWatch!</h1>
+                        <p>Лучший агрегатор фильмов со всего интернета. Находите, сохраняйте, смотрите.</p>
+
+
+                        <button class="cta-button">Начать использование</button>
+                    </div>
+                        <img src="static/images/welcome-image.jpg" alt="Кинотеатр с попкорном">
+                </section>
+
+                <section class="search-section flor">
+                    <h2>Найди свой идеальный фильм</h2>
+                    <div class="search-container">
+                        <input type="text" placeholder="Введите название, актера, режиссера...">
+                        <button class="search-button">Поиск</button>
+                    </div>
+                </section>
+
+                <section class="features-grid flor">
+                    <!-- Ячейка 1 - Где посмотреть -->
+                    <div class="feature-card">
+                        <div class="feature-icon">🎬</div>
+                        <h3>Где посмотреть</h3>
+                        <p>Узнайте, на каких платформах доступен фильм прямо сейчас</p>
+                        <button class="feature-button">Перейти</button>
+                    </div>
+
+                    <!-- Ячейка 2 - Что посмотреть -->
+                    <div class="feature-card">
+                        <div class="feature-icon">🍿</div>
+                        <h3>Что посмотреть</h3>
+                        <p>Персональные рекомендации на основе ваших предпочтений</p>
+                        <button class="feature-button">Перейти</button>
+                    </div>
+
+                    <!-- Ячейка 4 - Поиск по тегам -->
+                    <div class="feature-card">
+                        <div class="feature-icon">🔖</div>
+                        <h3>Поиск по тегам</h3>
+                        <p>Найдите фильмы по настроению, жанру или ключевым словам</p>
+                        <button class="feature-button">Перейти</button>
+                    </div>
+                </section>
+
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container text-center">
+                <p>© 2025 </p>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
