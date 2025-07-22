@@ -1,5 +1,5 @@
 __all__ = (
-    Base,
+    'Base',
 )
 
 from base import Base
