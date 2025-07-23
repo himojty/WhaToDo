@@ -1,0 +1,10 @@
+.groupSection {
+    display:               grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap:                   20px;
+    width:                 100%;
+    max-width:             1200px;
+    margin:                0 auto 60px;
+    padding:               15px;
+    box-sizing:            border-box;
+}
