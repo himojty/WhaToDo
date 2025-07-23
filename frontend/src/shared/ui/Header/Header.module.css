@@ -13,7 +13,7 @@
 }
 
 .app_header.scrolled {
-    background-color: #CCCCCC;
+    background-color: #424942;
     box-shadow:       0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,7 +28,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color:           black;
+    color:           white;
     font-weight:     bold;
     font-size:       20px;
 }
