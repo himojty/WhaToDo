@@ -10,6 +10,7 @@ async def create_movie(session: AsyncSession, movie_in: dict) -> Movie:
     await session.commit()
     return movie
 
+
 async def get_movies(session: AsyncSession) -> list[Movie] | None:
     stmt = select(Movie).order_by(Movie.id)
     result: Result = await session.execute(stmt)
