@@ -1,10 +1,9 @@
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings
-import os
 
 
 class DBSettings(BaseModel):
-    url: str = os.environ.get("DATABASE_URL")
+    url: str = "postgresql+asyncpg://guest:guest@lochalhost:5432/movies"
     echo: bool = False
 
 
