@@ -14,7 +14,7 @@ class Movie(MovieBase):
     id: int
 
 
-class MovieCreate(MovieSchema):
+class MovieCreate(MovieBase):
     pass
 
 
