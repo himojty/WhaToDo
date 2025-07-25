@@ -39,6 +39,6 @@ async def update_movie(
     return movie_update
 
 
-async def delete_movie(session: AsyncSession, movie: MovieSchema) -> None:
+async def delete_movie(session: AsyncSession, movie: Movie) -> None:
     await session.delete(movie)
     await session.commit()
