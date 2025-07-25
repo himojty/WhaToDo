@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings
 
+class ApiSettings(BaseModel):
+    prefix: str = "/api"
 
 class DbSettings(BaseModel):
     url: str = "postgresql+asyncpg://app:password@localhost:5432/film-library"
@@ -8,8 +10,7 @@ class DbSettings(BaseModel):
 
 
 class Settings(BaseSettings):
-    api_prefix: str = "/api/"
-
+    api: ApiSettings = ApiSettings()
     db: DbSettings = DbSettings()
 
 
