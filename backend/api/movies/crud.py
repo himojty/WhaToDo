@@ -2,10 +2,15 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, Result
 
 from core.models import Movie
-from core.schemas.movies import MovieUpdate, MovieUpdatePartial, MovieSchema
+from core.schemas.movies import (
+    MovieUpdate,
+    MovieUpdatePartial,
+    MovieSchema,
+    MovieCreate,
+)
 
 
-async def create_movie(session: AsyncSession, movie_in: dict) -> Movie:
+async def create_movie(session: AsyncSession, movie_in: MovieCreate) -> Movie:
     movie = Movie(**movie_in.model_dump())
     session.add(movie)
     await session.commit()
