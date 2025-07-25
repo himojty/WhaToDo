@@ -36,3 +36,11 @@ async def update_movie(
     return await crud.update_movie(
         session=session, movie_update=movie_update, movie=movie
     )
+
+
+@router.delete("/{movie_id}/", status_code=status.HTTP_204_NO_CONTENT)
+async def delete_movie(
+    movie: Movie = Depends(movie_by_id),
+    session: AsyncSession = Depends(db_helper.scoped_session_dependency),
+) -> None:
+    await crud.delete_movie(session=session, movie=movie)
