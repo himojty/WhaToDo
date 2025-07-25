@@ -5,7 +5,6 @@ from core.models import Movie
 from core.schemas.movies import (
     MovieUpdate,
     MovieUpdatePartial,
-    MovieSchema,
     MovieCreate,
 )
 
