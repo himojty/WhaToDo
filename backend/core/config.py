@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from pydantic_settings import BaseSettings
 
 
-class DBSettings(BaseModel):
+class DbSettings(BaseModel):
     url: str = "postgresql+asyncpg://app:password@localhost:5432/film-library"
     echo: bool = False
 
@@ -10,7 +10,7 @@ class DBSettings(BaseModel):
 class Settings(BaseSettings):
     api_prefix: str = "/api/"
 
-    db: DBSettings = DBSettings()
+    db: DbSettings = DbSettings()
 
 
 settings = Settings()
