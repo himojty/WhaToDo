@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String, Text
 
-from base import Base
-from mixins import IdIntPkMixin
+from .base import Base
+from .mixins import IdIntPkMixin
 
 
 class Movie(Base, IdIntPkMixin):

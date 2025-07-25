@@ -2,6 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, Result
 
 from core.models import Movie
+from core.schemas.movies import MovieUpdate, MovieUpdatePartial, MovieSchema
 
 
 async def create_movie(session: AsyncSession, movie_in: dict) -> Movie:
