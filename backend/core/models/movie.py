@@ -6,8 +6,6 @@ from .mixins import IdIntPkMixin
 
 
 class Movie(Base, IdIntPkMixin):
-    __tablename__ = "movies"
-
     title: Mapped[str] = mapped_column(
         String(128),
     )
