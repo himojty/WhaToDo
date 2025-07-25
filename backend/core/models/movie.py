@@ -16,3 +16,4 @@ class Movie(Base, IdIntPkMixin):
         Text(),
     )
     release: Mapped[str | None]
+    image: Mapped[bytes | None] = mapped_column(LargeBinary())
