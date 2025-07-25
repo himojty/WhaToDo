@@ -11,7 +11,7 @@ async def movie_by_id(
     movie_id: int,
     session: AsyncSession = Depends(db_helper.scoped_session_dependency),
 ) -> Movie:
-    movie = await crud.get_movie_by_id(session=session, movie_id=movie_id)
+    movie = await crud.get_movie(session=session, movie_id=movie_id)
     if movie is not None:
         return movie
 
