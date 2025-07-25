@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from core.models import db_helper
-from core.schemas.movies import MovieCreate, MovieUpdate, MovieSchema, Movie
+from core.schemas.movies import MovieCreate, MovieUpdate, Movie
 from . import crud
 from .dependencies import movie_by_id
 
@@ -27,7 +27,12 @@ async def get_movies(
     return await crud.get_movies(session=session)
 
 
-@router.put("/{movie_id}/", response_model=MovieSchema)
+@router.get("/{movie_id}/")
+async def get_movie(movie: Movie = Depends(movie_by_id)) -> Movie | None:
+    return movie
+
+
+@router.put("/{movie_id}/", response_model=Movie)
 async def update_movie(
     movie_update: MovieUpdate,
     movie: Movie = Depends(movie_by_id),
