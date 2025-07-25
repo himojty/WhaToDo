@@ -6,7 +6,7 @@ from .mixins import IdIntPkMixin
 
 
 class Movie(Base, IdIntPkMixin):
-    title: Mapped[str] = mapped_column(
+    title: Mapped[str | None] = mapped_column(
         String(128),
     )
     origin_title: Mapped[str | None] = mapped_column(
