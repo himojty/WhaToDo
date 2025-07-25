@@ -4,7 +4,7 @@ from sqlalchemy import select, Result
 from core.models import Movie
 
 
-async def create_movie(session: AsyncSession, movie_in: dict) -> Movie:
+async def create_movie(session: AsyncSession, movie_in: dict) -> MovieC:
     movie = Movie(**movie_in.model_dump())
     session.add(movie)
     await session.commit()
@@ -20,3 +20,15 @@ async def get_movies(session: AsyncSession) -> list[Movie] | None:
 
 async def get_movie_by_id(session: AsyncSession, movie_id: int) -> Movie:
     return session.get(Movie, movie_id)
+
+
+async def update_movie(
+    session: AsyncSession,
+    movie: Movie,
+    movie_update: MovieUpdate | MovieUpdatePartial,
+    partial: bool = False,
+) -> Movie:
+    for name, value in movie_update.model_dump(exclude_unset=partial).items():
+        setattr(movie, name, value)
+    await session.commit()
+    return movie_update
