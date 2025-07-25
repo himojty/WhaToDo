@@ -16,7 +16,7 @@ router = APIRouter(prefix="/movies", tags=["Movies"])
 async def create_movie(
     movie: MovieCreate,
     session: AsyncSession = Depends(db_helper.scoped_session_dependency),
-):
+) -> Movie:
     return await crud.create_movie(session=session, movie_in=movie)
 
 
