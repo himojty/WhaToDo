@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from core.models.db_helper import db_helper
-from core.schemas.movies import MovieCreate, MovieUpdate, MovieSchema
+from core.models import db_helper
+from core.schemas.movies import MovieCreate, MovieUpdate, MovieSchema, Movie
 from . import crud
 from .dependencies import movie_by_id
 
