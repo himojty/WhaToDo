@@ -23,4 +23,7 @@ class MovieUpdate(MovieCreate):
 
 
 class MovieUpdatePartial(MovieCreate):
-    pass
+    title: str | None
+    origin_title: str | None
+    description: str | None
+    release: str | None
