@@ -3,8 +3,8 @@ services:
     image: postgres:17.5
     environment:
       POSTGRES_DB: film-library
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: guest
+      POSTGRES_PASSWORD: guest
       POSTGRES_DATA: /var/lib/postgresql/data
     volumes:
       - pg_data:/var/lib/postgresql/data
