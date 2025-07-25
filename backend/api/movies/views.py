@@ -16,11 +16,11 @@ async def create_movie(
     movie: MovieCreate,
     session: AsyncSession = Depends(db_helper.scoped_session_dependency),
 ):
-    return crud.create_movie(session=session, movie_in=movie)
+    return await crud.create_movie(session=session, movie_in=movie)
 
 
 @router.get("/")
 async def get_movies(
     session: AsyncSession = Depends(db_helper.scoped_session_dependency),
 ):
-    await crud.get_movies(session=session)
+    return await crud.get_movies(session=session)
