@@ -32,7 +32,7 @@ async def get_movie(movie: Movie = Depends(movie_by_id)) -> Movie | None:
     return movie
 
 
-@router.put("/{movie_id}/", response_model=Movie)
+@router.put("/{movie_id}/", response_model=MovieUpdate)
 async def update_movie(
     movie_update: MovieUpdate,
     movie: Movie = Depends(movie_by_id),

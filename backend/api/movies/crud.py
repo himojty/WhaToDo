@@ -32,7 +32,7 @@ async def update_movie(
     movie: Movie,
     movie_update: MovieUpdate | MovieUpdatePartial,
     partial: bool = False,
-) -> Movie:
+) -> MovieUpdate:
     for name, value in movie_update.model_dump(exclude_unset=partial).items():
         setattr(movie, name, value)
     await session.commit()
