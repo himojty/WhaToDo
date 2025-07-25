@@ -1,7 +1,7 @@
 from pydantic import BaseModel, ConfigDict
 
 
-class MovieSchema(BaseModel):
+class MovieBase(BaseModel):
     title: str
     origin_title: str
     description: str
