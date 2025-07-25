@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 
 class DBSettings(BaseModel):
-    url: str = "postgresql+asyncpg://guest:guest@lochalhost:5432/movies"
+    url: str = "postgresql+asyncpg://guest:guest@lochalhost:5432/film-library"
     echo: bool = False
 
 
