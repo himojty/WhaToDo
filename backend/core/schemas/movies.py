@@ -5,7 +5,7 @@ class MovieBase(BaseModel):
     title: str
     origin_title: str
     description: str
-    release: datetime
+    release: str
 
 
 class MovieSchema(MovieBase):
