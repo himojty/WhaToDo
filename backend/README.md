@@ -7,6 +7,7 @@ Movies:
     - `origin-title`
     - `desription`
     - `release`
+    - `image`
 
     - `tags`
     - `rating`
