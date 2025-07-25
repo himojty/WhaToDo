@@ -8,7 +8,7 @@ class MovieBase(BaseModel):
     release: str
 
 
-class MovieSchema(MovieBase):
+class Movie(MovieBase):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
