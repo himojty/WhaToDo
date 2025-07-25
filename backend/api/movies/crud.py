@@ -24,8 +24,8 @@ async def get_movies(session: AsyncSession) -> list[Movie] | None:
     return movies
 
 
-async def get_movie_by_id(session: AsyncSession, movie_id: int) -> Movie:
-    return session.get(Movie, movie_id)
+async def get_movie(session: AsyncSession, movie_id: int) -> Movie | None:
+    return await session.get(Movie, movie_id)
 
 
 async def update_movie(
