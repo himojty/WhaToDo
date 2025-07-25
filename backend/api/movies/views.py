@@ -43,6 +43,17 @@ async def update_movie(
     )
 
 
+@router.patch("/{movie_id}/", response_model=MovieUpdate)
+async def update_movie_partial(
+    movie_update: MovieUpdate,
+    movie: Movie = Depends(movie_by_id),
+    session: AsyncSession = Depends(db_helper.scoped_session_dependency),
+):
+    return await crud.update_movie(
+        session=session, movie_update=movie_update, movie=movie, partial=True
+    )
+
+
 @router.delete("/{movie_id}/", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_movie(
     movie: Movie = Depends(movie_by_id),
