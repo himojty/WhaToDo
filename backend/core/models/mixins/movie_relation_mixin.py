@@ -6,6 +6,7 @@ from sqlalchemy.orm import declared_attr, Mapped, mapped_column, relationship
 if TYPE_CHECKING:
     from ..movie import Movie
 
+
 class MovieRelationMixin:
     _movie_id_nullable: bool = False
     _movie_id_unique: bool = False
