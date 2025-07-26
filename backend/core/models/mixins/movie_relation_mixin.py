@@ -15,7 +15,7 @@ class MovieRelationMixin:
     @declared_attr
     def movie_id(cls) -> Mapped[int]:
         return mapped_column(
-            ForeignKey("movie.id"),
+            ForeignKey("movies.id"),
             unique=cls._movie_id_unique,
             nullable=cls._movie_id_nullable,
         )
