@@ -7,7 +7,7 @@ from .base import Base
 from .mixins import IdIntPkMixin
 
 if TYPE_CHECKING:
-    from .sites import Site
+    from .site import Site
 
 
 class Movie(Base, IdIntPkMixin):

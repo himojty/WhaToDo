@@ -7,5 +7,5 @@ __all__ = (
 
 from .base import Base
 from .movie import Movie
-from .sites import Site
+from .site import Site
 from .db_helper import db_helper
