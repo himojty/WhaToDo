@@ -8,6 +8,7 @@ from .mixins import IdIntPkMixin
 
 if TYPE_CHECKING:
     from .site import Site
+    from .rating import Rating
 
 
 class Movie(Base, IdIntPkMixin):
@@ -22,3 +23,4 @@ class Movie(Base, IdIntPkMixin):
     image: Mapped[bytes | None] = mapped_column(LargeBinary())
 
     sites: Mapped["Site"] = relationship(back_populates="movies")
+    rating: Mapped["Rating"] = relationship(back_populates="movies")
