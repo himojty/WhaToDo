@@ -1,6 +1,6 @@
 __all__ = (
-    'IdIntPkMixin',
-    'MovieRelationMixin',
+    "IdIntPkMixin",
+    "MovieRelationMixin",
 )
 
 from ..mixins.id_int_pk_mixin import IdIntPkMixin
