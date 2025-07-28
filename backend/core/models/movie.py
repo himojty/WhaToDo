@@ -20,7 +20,6 @@ class Movie(Base, IdIntPkMixin):
         Text(),
     )
     release: Mapped[str | None]
-    image: Mapped[bytes | None] = mapped_column(LargeBinary())
 
-    sites: Mapped["Site"] = relationship(back_populates="movies")
-    rating: Mapped["Rating"] = relationship(back_populates="movies")
+    sites: Mapped[list["Site"]] = relationship(back_populates="movie")
+    rating: Mapped["Rating"] = relationship(back_populates="movie")
