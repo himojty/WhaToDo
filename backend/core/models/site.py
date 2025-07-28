@@ -1,13 +1,10 @@
-from sqlalchemy import ARRAY, String
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped
 
 from core.models import Base
-from core.models.mixins import IdIntPkMixin
-from core.models.mixins.movie_relation_mixin import MovieRelationMixin
+from core.models.mixins import IdIntPkMixin, MovieRelationMixin
 
 
 class Site(Base, IdIntPkMixin, MovieRelationMixin):
-    _movie_id_unique = True
     _movie_back_populates = "sites"
 
-    sites: Mapped[list[str]] = mapped_column(ARRAY(String))
+    site: Mapped[str]
