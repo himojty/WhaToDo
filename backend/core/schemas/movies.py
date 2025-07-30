@@ -6,7 +6,6 @@ class MovieBase(BaseModel):
     origin_title: str
     description: str
     release: str
-    image: bytes | None
 
 
 class Movie(MovieBase):
