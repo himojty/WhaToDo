@@ -12,7 +12,7 @@ router = APIRouter(prefix="/ratings", tags=["Ratings"])
 async def get_ratings(
     session: AsyncSession = Depends(db_helper.scoped_session_dependency),
 ):
-    await crud.get_ratings(session=session)
+    return await crud.get_ratings(session=session)
 
 
 @router.post("/")
