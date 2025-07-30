@@ -3,7 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from core.models import db_helper
 from core.schemas.movies import MovieCreate, MovieUpdate, Movie
-from . import crud
+from . import crud, utils
 from .dependencies import movie_by_id
 
 router = APIRouter(prefix="/movies", tags=["Movies"])
@@ -22,9 +22,11 @@ async def create_movie(
 
 @router.get("/")
 async def get_movies(
+    skip: int = 0,
+    limit: int = 20,
     session: AsyncSession = Depends(db_helper.scoped_session_dependency),
 ):
-    return await crud.get_movies(session=session)
+    return await utils.get_movies_pagination(session=session, skip=skip, limit=limit)
 
 
 @router.get("/{movie_id}/")
