@@ -2,7 +2,8 @@ from pydantic import BaseModel
 
 
 class RatingSchema(BaseModel):
-    rating: float
+    imdb: float
+    kinopoisk: float
 
     movie_id: int
 
