@@ -5,7 +5,7 @@ from core.models.mixins import IdIntPkMixin, MovieRelationMixin
 
 
 class Rating(Base, IdIntPkMixin, MovieRelationMixin):
-    _movie_back_populates = "rating"
+    _movie_back_populates = "ratings"
 
     imdb: Mapped[float]
     kinopoisk: Mapped[float]

@@ -22,4 +22,4 @@ class Movie(Base, IdIntPkMixin):
     release: Mapped[str | None]
 
     sites: Mapped[list["Site"]] = relationship(back_populates="movie")
-    rating: Mapped["Rating"] = relationship(back_populates="movie")
+    ratings: Mapped["Rating"] = relationship(back_populates="movie")
