@@ -9,6 +9,7 @@ from .mixins import IdIntPkMixin
 if TYPE_CHECKING:
     from .site import Site
     from .rating import Rating
+    from image_path import ImagePath
 
 
 class Movie(Base, IdIntPkMixin):
@@ -23,3 +24,4 @@ class Movie(Base, IdIntPkMixin):
 
     sites: Mapped[list["Site"]] = relationship(back_populates="movie")
     ratings: Mapped["Rating"] = relationship(back_populates="movie")
+    image_paths: Mapped["ImagePath"] = relationship(back_populates="movie")
