@@ -7,13 +7,13 @@ export default function Header() {
 
     return (
         <header className={`${styles.app_header} ${isScrolled ? styles.scrolled : ''}`}>
-            <a href="/" className={styles.logo}>
+            <a href="/movies" className={styles.logo}>
                 <img src={logo} alt="Header logo"/>
             </a>
 
             <nav>
                 <ul>
-                    <li><a href="/">Главная</a></li>
+                    <li><a href="/movies">Главная</a></li>
                 </ul>
             </nav>
         </header>
