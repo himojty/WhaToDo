@@ -35,8 +35,12 @@ async def get_movies_pagination(
 ) -> list[Movie] | None:
     statement = (
         select(Movie)
-        .options(joinedload(Movie.ratings), selectinload(Movie.sites))
-        .order_by(Movie.id)
+        .options(
+            joinedload(Movie.ratings),
+            joinedload(Movie.image_paths),
+            selectinload(Movie.sites),
+        )
+        .order_by(func.random() * Movie.id)
         .offset(skip)
         .limit(limit)
     )
