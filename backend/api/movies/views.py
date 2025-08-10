@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from core.models import db_helper
 from core.schemas.movies import MovieCreate, MovieUpdate, Movie
 from . import crud, utils
-from .dependencies import movie_by_id
+from .dependencies import movie_by_id, movie_by_id_with_relations
 
 router = APIRouter(prefix="/movies", tags=["Movies"])
 
@@ -30,7 +30,7 @@ async def get_movies(
 
 
 @router.get("/{movie_id}/")
-async def get_movie(movie: Movie = Depends(movie_by_id)) -> Movie | None:
+async def get_movie(movie: Movie = Depends(movie_by_id_with_relations)):
     return movie
 
 
